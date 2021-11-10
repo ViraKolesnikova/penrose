@@ -1,0 +1,32 @@
+main {
+  padding-bottom: 383px;
+}
+
+.title {
+  margin-top: 62px;
+}
+
+@media screen and(min-width: 1366px) {
+  .title {
+    margin-top: 62px;
+    margin-left: 88px;
+  }
+}
+
+.content-position {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.video {
+  margin-left: 88px;
+  margin-top: 48px;
+}
+
+.slider {
+  width: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,160 @@
+header {
+  padding-top: 35px;
+}
+
+.logo {
+  display: flex;
+}
+
+.logo-image {
+  width: 88px;
+  height: 80px;
+  margin-right: 8px;
+  background: url(../images/Triangle.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo-name {
+  font-size: 64px;
+  line-height: 0.8;
+  color: $nav-color;
+}
+
+.burger-btn {
+  display: none;
+  margin-left: auto;
+  color: $nav-color;
+}
+
+.close-menu-btn {
+  display: none;
+  position: absolute;
+  top: 15%;
+  right: 1%;
+  color: $nav-color;
+}
+
+.burger-btn-icon,
+.close-menu-btn-icon {
+  fill: currentColor;
+}
+
+.navigation {
+  position: absolute;
+  right: 2%;
+  top: 20%;
+  padding: 42px 22px;
+  color: $nav-color;
+  background-color: $background;
+  border: 1px solid $home;
+  border-radius: 10px;
+  box-shadow: $hover-bgc 0px 7px 29px 0px;
+}
+
+.navigation-item {
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: $nav-color;
+}
+
+.navigation-item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.navigation-list > .navigation-item--home {
+  color: $home;
+}
+
+@media screen and(min-width: 1366px) {
+  .burger-btn {
+    display: none;
+  }
+
+  .mobile-navigation {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .navigation-list {
+    display: flex;
+    align-items: center;
+  }
+
+  .navigation-item:not(:last-child) {
+    margin-right: 8px;
+    margin-bottom: 0;
+  }
+
+  .navigation-list > .navigation-item--home {
+    margin-right: 12px;
+  }
+}
+
+.header-position {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-link {
+  display: block;
+  padding: 12px;
+  transition: color $duration $timing, background-color $duration $timing;
+}
+
+.navigation-link:hover,
+.navigation-link:focus,
+.navigation-submenu:hover,
+.navigation-submenu:focus,
+.burger-btn:hover,
+.burger-btn:focus {
+  background-color: $hover-bgc;
+
+  color: $hover-text-color;
+  border-radius: 8px;
+}
+
+.navigation-submenu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+
+  font-size: 18px;
+  font-weight: inherit;
+  letter-spacing: 0.9px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  color: $nav-color;
+  transition: color $duration $timing, background-color $duration $timing;
+}
+
+.bottom-arrow {
+  margin-left: 8px;
+  fill: currentColor;
+}
+
+.sub-menu-list {
+  position: absolute;
+  padding: 22px;
+  color: $sub-menu-color;
+  background-color: $white;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+
+.sub-menu-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.svg {
+  position: absolute;
+}

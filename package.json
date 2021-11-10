@@ -1,0 +1,34 @@
+{
+  "name": "penrose",
+  "version": "1.0.0",
+  "description": "test task",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /penrose/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViraKolesnikova/penrose.git"
+  },
+  "author": "Vira Kolesnikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViraKolesnikova/penrose/issues"
+  },
+  "homepage": "https://ViraKolesnikova.github.io/penrose#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3",
+    "handlebars": "^4.7.7",
+    "lodash.debounce": "^4.0.8",
+    "parcel-bundler": "^1.12.5"    
+  },
+  "devDependencies": {
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
+  }
+}

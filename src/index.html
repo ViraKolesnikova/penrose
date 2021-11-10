@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penrose</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container header-position">
+        <div class="logo">
+          <div class="logo-image"></div>
+          <p class="logo-name">penrose</p>
+        </div>
+        <button type="button" class="burger-btn button">
+          <svg class="burger-btn-icon" width="50" height="50">
+            <use href="./images/symbol-defs.svg#menu"></use>
+          </svg>
+        </button>
+        <nav class="navigation is-hidden">
+          <ul class="navigation-list">
+            <li class="navigation-item navigation-item--home">HOME</li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">NEW COLLECTIONS</a>
+            </li>
+            <li class="navigation-item">
+              <button type="button" class="navigation-submenu button" id="sub-menu-btn">
+                STORE
+                <svg class="bottom-arrow" width="24" height="23">
+                  <use class="bottom" href="./images/symbol-defs.svg#icon-arrow_bottom"></use>
+                  <use class="top is-hidden" href="./images/symbol-defs.svg#icon-arrow-top"></use>
+                </svg>
+              </button>
+              <ul class="sub-menu-list is-hidden">
+                <li class="sub-menu-item">
+                  <a href="#">Women</a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="#">Men</a>
+                </li>
+                <li class="sub-menu-item">
+                  <a href="#">Kids</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navigation-item">
+              <a href="#" class="navigation-link">CONTACTS</a>
+            </li>
+          </ul>
+        </nav>
+        <button type="button" class="close-menu-btn button">
+          <svg class="close-menu-btn-icon" width="50" height="50">
+            <use href="./images/symbol-defs.svg#close-menu"></use>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="content-position">
+          <h1 class="title">
+            <img src="./images/Title.png" alt="Fashion club PENROSE" />
+          </h1>
+          <div class="slider">
+            <button type="button" class="button" id="prev-btn">
+              <svg class="left-arrow" width="32" height="48">
+                <use href="./images/symbol-defs.svg#icon-arrow_left"></use>
+              </svg>
+            </button>
+            <div class="slider-content"></div>
+            <button type="button" class="button" id="next-btn">
+              <svg class="right-arrow" width="32" height="48">
+                <use href="./images/symbol-defs.svg#icon-arrow_right"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="video">
+          <!-- <iframe width="160" height="90" src="https://www.youtube.com/embed/nypPIbyIcDk" title="YouTube video player"
+              frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe> -->
+        </div>
+      </div>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -18,12 +18,12 @@
   "bugs": {
     "url": "https://github.com/ViraKolesnikova/penrose/issues"
   },
-  "homepage": "https://ViraKolesnikova.github.io/penrose#readme",
+  "homepage": "https://ViraKolesnikova.github.io/penrose",
   "dependencies": {
     "gh-pages": "^3.2.3",
     "handlebars": "^4.7.7",
     "lodash.debounce": "^4.0.8",
-    "parcel-bundler": "^1.12.5"    
+    "parcel-bundler": "^1.12.5"
   },
   "devDependencies": {
     "parcel-plugin-handlebars-precompile": "^1.0.2",

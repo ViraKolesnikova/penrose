@@ -1,4 +1,5 @@
 header {
+  width: 100%;
   padding-top: 35px;
 }
 
@@ -22,34 +23,23 @@ header {
 }
 
 .burger-btn {
-  display: none;
+  position: absolute;
+  top: 0;
+  right: 2%;
   margin-left: auto;
   color: $nav-color;
 }
 
 .close-menu-btn {
-  display: none;
   position: absolute;
-  top: 15%;
-  right: 1%;
+  top: 0%;
+  right: 2%;
   color: $nav-color;
 }
 
 .burger-btn-icon,
 .close-menu-btn-icon {
   fill: currentColor;
-}
-
-.navigation {
-  position: absolute;
-  right: 2%;
-  top: 20%;
-  padding: 42px 22px;
-  color: $nav-color;
-  background-color: $background;
-  border: 1px solid $home;
-  border-radius: 10px;
-  box-shadow: $hover-bgc 0px 7px 29px 0px;
 }
 
 .navigation-item {
@@ -67,13 +57,31 @@ header {
 .navigation-list > .navigation-item--home {
   color: $home;
 }
-
-@media screen and(min-width: 1366px) {
-  .burger-btn {
+@media screen and(max-width:1365px) {
+  .navigation {
     display: none;
   }
 
-  .mobile-navigation {
+  .navigation-mobile {
+    display: block;
+    position: absolute;
+    right: 2%;
+    top: 0%;
+    padding: 42px 22px;
+    color: $nav-color;
+    background-color: $background;
+    border: 1px solid $home;
+    border-radius: 10px;
+    box-shadow: $hover-bgc 0px 7px 29px 0px;
+  }
+
+  .navigation-item--home {
+    padding-left: 12px;
+  }
+}
+
+@media screen and(min-width: 1366px) {
+  .mobile-menu {
     display: none;
   }
 
@@ -94,7 +102,7 @@ header {
   }
 
   .navigation-list > .navigation-item--home {
-    margin-right: 12px;
+    margin-right: 20px;
   }
 }
 

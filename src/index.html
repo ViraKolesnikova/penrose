@@ -25,12 +25,8 @@
           <div class="logo-image"></div>
           <p class="logo-name">penrose</p>
         </div>
-        <button type="button" class="burger-btn button">
-          <svg class="burger-btn-icon" width="50" height="50">
-            <use href="./images/symbol-defs.svg#menu"></use>
-          </svg>
-        </button>
-        <nav class="navigation is-hidden">
+        
+        <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item navigation-item--home">HOME</li>
             <li class="navigation-item">
@@ -61,11 +57,50 @@
             </li>
           </ul>
         </nav>
-        <button type="button" class="close-menu-btn button">
-          <svg class="close-menu-btn-icon" width="50" height="50">
-            <use href="./images/symbol-defs.svg#close-menu"></use>
-          </svg>
-        </button>
+
+        <div class="mobile-menu">
+          <button type="button" class="burger-btn button">
+            <svg class="burger-btn-icon" width="50" height="50">
+              <use href="./images/symbol-defs.svg#menu"></use>
+            </svg>
+          </button>          
+          <nav class="navigation-mobile is-hidden">
+            <ul class="navigation-list">
+              <li class="navigation-item navigation-item--home">HOME</li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">NEW COLLECTIONS</a>
+              </li>
+              <li class="navigation-item">
+                <button type="button" class="navigation-submenu button" id="sub-menu-btn">
+                  STORE
+                  <svg class="bottom-arrow" width="24" height="23">
+                    <use class="bottom" href="./images/symbol-defs.svg#icon-arrow_bottom"></use>
+                    <use class="top is-hidden" href="./images/symbol-defs.svg#icon-arrow-top"></use>
+                  </svg>
+                </button>
+                <ul class="sub-menu-list is-hidden">
+                  <li class="sub-menu-item">
+                    <a href="#">Women</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="#">Men</a>
+                  </li>
+                  <li class="sub-menu-item">
+                    <a href="#">Kids</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="navigation-item">
+                <a href="#" class="navigation-link">CONTACTS</a>
+              </li>
+            </ul>
+            <button type="button" class="close-menu-btn button">
+              <svg class="close-menu-btn-icon" width="40" height="40">
+                <use href="./images/symbol-defs.svg#close-menu"></use>
+              </svg>
+            </button>         
+          </nav>
+        </div>
       </div>
     </header>
 

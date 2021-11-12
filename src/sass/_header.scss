@@ -67,6 +67,7 @@ header {
     position: absolute;
     right: 2%;
     top: 0%;
+    max-width: 232px;
     padding: 42px 22px;
     color: $nav-color;
     background-color: $background;
@@ -150,7 +151,8 @@ header {
   fill: currentColor;
 }
 
-.sub-menu-list {
+.sub-menu-list,
+.sub-menu-mobile-list {
   position: absolute;
   padding: 22px;
   color: $sub-menu-color;

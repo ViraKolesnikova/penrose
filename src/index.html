@@ -71,14 +71,14 @@
                 <a href="#" class="navigation-link">NEW COLLECTIONS</a>
               </li>
               <li class="navigation-item">
-                <button type="button" class="navigation-submenu button" id="sub-menu-btn">
+                <button type="button" class="navigation-submenu button" id="sub-menu-mobile-btn">
                   STORE
                   <svg class="bottom-arrow" width="24" height="23">
-                    <use class="bottom" href="./images/symbol-defs.svg#icon-arrow_bottom"></use>
-                    <use class="top is-hidden" href="./images/symbol-defs.svg#icon-arrow-top"></use>
+                    <use class="mobile-bottom" href="./images/symbol-defs.svg#icon-arrow_bottom"></use>
+                    <use class="mobile-top is-hidden" href="./images/symbol-defs.svg#icon-arrow-top"></use>
                   </svg>
                 </button>
-                <ul class="sub-menu-list is-hidden">
+                <ul class="sub-menu-mobile-list is-hidden">
                   <li class="sub-menu-item">
                     <a href="#">Women</a>
                   </li>
@@ -115,20 +115,22 @@
               <img src="./images/Title.png" alt="Fashion club PENROSE" width="200px"/>
             </picture>
           </h1>
-          <div class="slider">
-            <button type="button" class="slider-button button is-hidden" id="prev-btn">
-              <svg class="left-arrow" width="40" >
-                <use href="./images/symbol-defs.svg#icon-arrow_left"></use>
-              </svg>
-            </button>
-            <ul class="slider-container"></ul>
-            <button type="button" class="slider-button button" id="next-btn">
-              <svg class="right-arrow" width="40" >
-                <use href="./images/symbol-defs.svg#icon-arrow_right"></use>
-              </svg>
-            </button>
+          <div class="slider-wrapper">
+            <div class="slider">
+              <button type="button" class="slider-button button is-hidden" id="prev-btn">
+                <svg class="left-arrow" width="40">
+                  <use href="./images/symbol-defs.svg#icon-arrow_left"></use>
+                </svg>
+              </button>
+              <ul class="slider-container"></ul>
+              <button type="button" class="slider-button button" id="next-btn">
+                <svg class="right-arrow" width="40">
+                  <use href="./images/symbol-defs.svg#icon-arrow_right"></use>
+                </svg>
+              </button>
+            </div>
+            <ul class="dots-list"></ul>
           </div>
-          <ul class="dots-list"></ul>
         </div>
         <div class="video">
           <!-- <iframe width="160" height="90" src="https://www.youtube.com/embed/nypPIbyIcDk" title="YouTube video player"

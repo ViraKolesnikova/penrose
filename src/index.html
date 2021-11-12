@@ -108,21 +108,27 @@
       <div class="container">
         <div class="content-position">
           <h1 class="title">
-            <img src="./images/Title.png" alt="Fashion club PENROSE" />
+            <picture>
+              <source media="(max-width: 767px)" srcset="./images/Title.png" width="200px">
+              <source media="(max-width: 1365px)" srcset="./images/Title.png" width="260px">
+              <source media="(min-width: 1366px)" srcset="./images/Title.png" width="336px">
+              <img src="./images/Title.png" alt="Fashion club PENROSE" width="200px"/>
+            </picture>
           </h1>
           <div class="slider">
-            <button type="button" class="button" id="prev-btn">
-              <svg class="left-arrow" width="32" height="48">
+            <button type="button" class="slider-button button is-hidden" id="prev-btn">
+              <svg class="left-arrow" width="40" >
                 <use href="./images/symbol-defs.svg#icon-arrow_left"></use>
               </svg>
             </button>
-            <div class="slider-content"></div>
-            <button type="button" class="button" id="next-btn">
-              <svg class="right-arrow" width="32" height="48">
+            <ul class="slider-container"></ul>
+            <button type="button" class="slider-button button" id="next-btn">
+              <svg class="right-arrow" width="40" >
                 <use href="./images/symbol-defs.svg#icon-arrow_right"></use>
               </svg>
             </button>
           </div>
+          <ul class="dots-list"></ul>
         </div>
         <div class="video">
           <!-- <iframe width="160" height="90" src="https://www.youtube.com/embed/nypPIbyIcDk" title="YouTube video player"

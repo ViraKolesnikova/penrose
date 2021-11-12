@@ -3,11 +3,26 @@ body {
   font-style: normal;
   font-weight: 600;
   background-color: $background;
-  background-image: url(../images/Model@2x.png), url(../images/Triangle.png),
-    url(../images/Triangle-Glow.png), url(../images/Shadow.svg);
-  background-position: left 45% top 60%, left 55% top 63%, left 55% top 68%, left 50% top 40%;
-  background-repeat: no-repeat;
-  object-fit: contain;
+}
+
+@media screen and(max-width: 1365px) {
+  body {
+    background-image: url(../images/Model@2x.png), url(../images/Triangle.png),
+      url(../images/Triangle-Glow.png), url(../images/Shadow.svg);
+    background-position: left 45% top 60%, left 55% top 63%, left 55% top 68%, left 50% top 40%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+  }
+}
+
+@media screen and(min-width: 1366px) {
+  body {
+    background-image: url(../images/Model@2x.png), url(../images/Triangle.png),
+      url(../images/Triangle-Glow.png), url(../images/Shadow.svg);
+    background-position: left 45% top 60%, left 55% top 63%, left 55% top 68%, left 50% top 40%;
+    background-repeat: no-repeat;
+    object-fit: contain;
+  }
 }
 
 h1,
@@ -52,6 +67,7 @@ a {
 .button {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .container {

@@ -3,20 +3,7 @@ main {
 }
 
 .title {
-  margin-top: 62px;
-}
-
-@media screen and(min-width: 1366px) {
-  .title {
-    margin-top: 55px;
-    margin-left: 94px;
-  }
-}
-
-.content-position {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 52px;
 }
 
 .video {
@@ -29,4 +16,79 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: auto;
+}
+
+.slider-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  min-width: 100%;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: 0.9px;
+}
+
+.left-quotes {
+  stroke: $span;
+  fill: $span;
+}
+
+.product-name {
+  margin-bottom: 10px;
+  font-size: inherit;
+  font-weight: inherit;
+  color: white;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: $price;
+  font-size: 16px;
+}
+
+.product-price::before {
+  content: '';
+  display: block;
+  width: 12px;
+  height: 1px;
+  margin-right: 4px;
+  border-bottom: 1px solid $price;
+}
+
+.slider-button {
+  color: $nav-color;
+}
+
+.left-arrow,
+.right-arrow {
+  fill: currentColor;
+}
+
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+@media screen and(min-width: 1366px) {
+  .title {
+    margin-top: 55px;
+    margin-left: 94px;
+  }
+  .content-position {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

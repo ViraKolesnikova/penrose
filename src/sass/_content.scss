@@ -3,7 +3,13 @@ main {
 }
 
 .title {
-  margin-top: 52px;
+  margin-top: 42px;
+}
+
+@media screen and(min-width: 768px) {
+  .title {
+    margin-top: 52px;
+  }
 }
 
 .video {
@@ -20,21 +26,26 @@ main {
 }
 
 .slider-container {
+  position: relative;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   width: 100%;
-  overflow: hidden;
 }
 
 .slider-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  // align-items: center;
+  align-items: center;
+}
+
+@media screen and(min-width: 768px) {
+  .slider-wrapper {
+    align-items: flex-end;
+  }
 }
 
 .slide {
+  position: absolute;
   min-width: 100%;
   font-size: 18px;
   font-weight: 400;

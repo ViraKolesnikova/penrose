@@ -14,5 +14,6 @@ export default {
  sliderContent : document.querySelector('.slider-container'),
  prevBtn : document.querySelector('#prev-btn'),
   nextBtn: document.querySelector('#next-btn'),
- dotsContainer: document.querySelector('.dots-list'),
+  dotsContainer: document.querySelector('.dots-list'),
+  mobileMenuContainer: document.querySelector('.mobile-menu')
 }

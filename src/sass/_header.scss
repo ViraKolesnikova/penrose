@@ -8,18 +8,32 @@ header {
 }
 
 .logo-image {
-  width: 88px;
-  height: 80px;
-  margin-right: 8px;
+  width: 60px;
   background: url(../images/Triangle.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .logo-name {
-  font-size: 64px;
-  line-height: 0.8;
+  font-size: 44px;
   color: $nav-color;
+}
+
+@media screen and(min-width: 768px) {
+  .logo-image {
+    width: 88px;
+    height: 80px;
+    margin-right: 8px;
+    background: url(../images/Triangle.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .logo-name {
+    font-size: 64px;
+    line-height: 0.8;
+    color: $nav-color;
+  }
 }
 
 .burger-btn {

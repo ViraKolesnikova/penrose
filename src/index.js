@@ -26,7 +26,6 @@ const {
 // ============Event Listeners===================
 subMenuBtn.addEventListener('click', onSubMenuClick);
 burgerBtn.addEventListener('click', onMobileMenuOpen);
-
 mobileNavRef.addEventListener('click', onCloseMenuByLinkClick);
 nextBtn.addEventListener('click', onNextBtnClick);
 // =============================================
@@ -120,7 +119,7 @@ async function filtrDataByPrice(data) {
 async function renderMarkUp(data) {
   const markUp = await template(data);
   sliderContent.innerHTML = markUp;
-  const arr = await addEventListenerForSlider();
+  const arr = await accessForSlider();
   arr[0].classList.add('is-open');
 }
 
@@ -137,57 +136,64 @@ async function appendDots(data) {
     li.appendChild(a);    
     dotsContainer.append(li);
   }
-  const arr = await addEventListenerForDots();
+  const arr = await accessForDots();
   arr[0].classList.add('is-active');
+  dotsContainer.addEventListener('click', onDotClick)
 }
 // =============================================
 
 // ============SLIDER FUNCTIONS================
-async function addEventListenerForSlider() {
+async function accessForSlider() {
   return document.querySelectorAll('.slide');   
 }
 
-async function addEventListenerForDots() {
+async function accessForDots() {
   return document.querySelectorAll('.dot');   
 }
 
 async function onPrevBtnClick() {
- const slides = await addEventListenerForSlider();
-  const dots = await addEventListenerForDots();
-  showArrow(nextBtn);
-  nextBtn.addEventListener('click', onNextBtnClick);
-  let index = recordCurrentSlideIndex(slides);
+ const slides = await accessForSlider();
+  const dots = await accessForDots();
+  showArrow(nextBtn, onNextBtnClick);
+  
+  let index = recordCurrentSlideIndex(slides, 'is-open');
   moveSlideLeft(slides, dots, index);
 
-  if(index === 1) {
-    prevBtn.classList.add('is-hidden');
-    prevBtn.removeEventListener('click', onPrevBtnClick);
+  if (index === 1) {
+    hideArrow(prevBtn, onPrevBtnClick);
   }  
 }
 
 async function onNextBtnClick(event) {
-  const slides = await addEventListenerForSlider();
-  const dots = await addEventListenerForDots();
-  showArrow(prevBtn);
-  prevBtn.addEventListener('click', onPrevBtnClick);
-  let index = recordCurrentSlideIndex(slides);
+  const slides = await accessForSlider();
+  const dots = await accessForDots();
+  showArrow(prevBtn, onPrevBtnClick);
+  
+  let index = recordCurrentSlideIndex(slides, 'is-open');
   moveSlideRight(slides,dots, index);
   
-  if(index === slides.length - 2) {
-    nextBtn.classList.add('is-hidden');
-    nextBtn.removeEventListener('click', onNextBtnClick);
+  if (index === slides.length - 2) {
+    hideArrow(nextBtn, onNextBtnClick);    
   }  
 }
 
-function showArrow(button) {
+function showArrow(button, callback) {
   if (button.classList.contains('is-hidden')) {
     button.classList.remove('is-hidden');
-  }
+    button.addEventListener('click', callback);
+  }  
 }
 
-function recordCurrentSlideIndex(array) {
+function hideArrow(button, callback) {
+  if (!button.classList.contains('is-hidden')) {
+    button.classList.add('is-hidden');
+    button.removeEventListener('click', callback);
+  }  
+}
+
+function recordCurrentSlideIndex(array, className) {
   for (let i = 0; i < array.length; i += 1){
-    if (array[i].classList.contains('is-open')) {
+    if (array[i].classList.contains(`${className}`)) {
       return i;
     }
   }
@@ -219,3 +225,37 @@ function moveSlideLeft(array,dotsArr, index) {
   }
 }
 // ================================================
+
+// ==============DOTS SWITCHER=====================
+async function onDotClick(event) {
+  event.preventDefault();
+  const slides = await accessForSlider();
+  const dots = await accessForDots();
+  let oldIndex = 0;
+  let newIndex = 0;
+  
+  dots.forEach(dot => {
+    if (event.target.nodeName === 'SPAN' && event.target !== dot.classList.contains('is-active')) {
+      oldIndex = recordCurrentSlideIndex(dots, 'is-active');
+      dots[oldIndex].classList.remove('is-active');
+      slides[oldIndex].classList.remove('is-open');
+      event.target.classList.add('is-active');
+    }    
+  })
+  newIndex = recordCurrentSlideIndex(dots, 'is-active');
+  slides[newIndex].classList.add('is-open');
+  
+  if (newIndex !== 0) {
+    showArrow(prevBtn, onPrevBtnClick);    
+  }
+  if (newIndex !== slides.length - 1) {
+    showArrow(nextBtn, onNextBtnClick);    
+  }
+  if (newIndex === slides.length - 1) {
+    hideArrow(nextBtn, onNextBtnClick);
+  }
+  if (newIndex === 0) {
+    hideArrow(prevBtn, onPrevBtnClick);
+  }
+}
+
